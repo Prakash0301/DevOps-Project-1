@@ -40,7 +40,9 @@ resource "aws_route_table" "Public-RT" {
         cidr_block = "0.0.0.0/0" # all traffic public
         gateway_id = aws_internet_gateway.igw.id
     }
-  
+  tags = {
+    Name = var.aws_route_table
+  }
 }
 
 # Route Table Association

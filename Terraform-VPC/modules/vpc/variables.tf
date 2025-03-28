@@ -14,3 +14,9 @@ variable "subnet_names" {
     default = [ "PublicSubnet1", "PublicSubnet2" ]
 }
 
+variable "aws_route_table" {  
+    description = "Route Table"
+    type = string
+    default = "Public-RT"
+  
+}
